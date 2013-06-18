@@ -8,18 +8,16 @@ public class Spiral
 {
   public static void main(String[] args)
   {
-    //    Show the tortoise --#1
     Tortoise.show();
-    //    Make the tortoise go as fast as possible --#4
     Tortoise.setSpeed(10);
-    //    Add Blue Violet to the Color Wheel --#6
-    ColorWheel.addColor(Colors.)
-    //    Add Violet to the Color Wheel --#8
-    //    Add Purple to the Color Wheel --#9
-    //    Do the following 75 times --#3
-    //         Change the color of the line the tortoise draws the next color on the Color Wheel --#7
-    //         Move the tortoise 5 times the current line number you are drawing --#5
-    //         Turn the tortoise 1/3 of 360 degrees to the right --#2
-    Tortoise.turn(360/3);
+    ColorWheel.addColor(Colors.Purples.BlueViolet);
+    ColorWheel.addColor(Colors.Purples.Violet);
+    ColorWheel.addColor(Colors.Purples.Purple);
+    for (int i = 1; i <= 75; i++)
+    {
+      Tortoise.setPenColor(ColorWheel.getNextColor());
+      Tortoise.move(i * 5);
+      Tortoise.turn(360 / 3);
+    }
   }
 }
